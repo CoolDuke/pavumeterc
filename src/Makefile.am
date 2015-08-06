@@ -17,13 +17,9 @@
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
 # USA.
 
-desktopdir = $(datadir)/applications
+bin_PROGRAMS=pavumeterc
 
-bin_PROGRAMS=pavumeter
+pavumeterc_SOURCES=vumeter.cc
 
-pavumeter_SOURCES=vumeter.cc
-
-pavumeter_LDADD=$(AM_LDADD) $(GUILIBS_LIBS) $(PULSE_LIBS)
-pavumeter_CXXFLAGS=$(AM_CXXFLAGS) $(GUILIBS_CFLAGS) $(PULSE_CFLAGS) 
-
-dist_desktop_DATA=pavumeter.desktop pavumeter-record.desktop
+pavumeterc_LDADD=$(AM_LDADD) $(GUILIBS_LIBS) $(PULSE_LIBS)
+pavumeterc_CXXFLAGS=$(AM_CXXFLAGS) $(GUILIBS_CFLAGS) $(PULSE_CFLAGS) 
